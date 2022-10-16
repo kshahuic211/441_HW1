@@ -1,7 +1,7 @@
 441_HW1 Readme
 Karan Shah kshah211@uic.edu 678212638
 
-Youtube Video Link-
+Youtube Video Link- https://www.youtube.com/watch?v=MchqkMVFZ1g
 
 
 Instruction on how to run-
