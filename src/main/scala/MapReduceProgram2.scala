@@ -50,7 +50,7 @@ object MapReduceProgram2:
 
   class Reduce extends MapReduceBase with Reducer[Text, IntWritable, Text, IntWritable]:
     logger.info("Inside Reducer Class of Job 2")
-    // will combine values like (11:29:58.827 to 11:30:09.827, 1) (11:29:58.827 to 11:30:09.827, 1) 
+    // will combine values like (11:29:58.827 to 11:30:09.827, 1) (11:29:58.827 to 11:30:09.827, 1)
     // into (11:29:58.827 to 11:30:09.827, 2) and write them to intermediate output
     override def reduce(key: Text, values: util.Iterator[IntWritable], output: OutputCollector[Text, IntWritable], reporter: Reporter): Unit =
       val sum = values.asScala.map(value => value.get()).sum  // gets the sum

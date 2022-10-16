@@ -14,7 +14,7 @@ object MainRunner:
   // creating logger
   val logger = CreateLogger(classOf[MainRunner.type])
   logger.info("The Map Reduce HW program has started")
-  
+
 
 
   // main method, calls all the four jobs one by one
@@ -23,9 +23,9 @@ object MainRunner:
     val InputPath = if (args.length >= 2) args(0) else applicationConf.getString("randomLogGenerator.InputPath")
     val OutputPath = if (args.length >= 2) args(1) else applicationConf.getString("randomLogGenerator.OutputPath")
     JobRunner(1, InputPath, OutputPath)
-    JobRunner(2, args(0), args(1))
-    JobRunner(3, args(0), args(1))
-    JobRunner(4, args(0), args(1))
+    JobRunner(2, InputPath, OutputPath)
+    JobRunner(3, InputPath, OutputPath)
+    JobRunner(4, InputPath, OutputPath)
   }
 
   // runs the specified job
