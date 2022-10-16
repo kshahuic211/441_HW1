@@ -23,7 +23,7 @@ Important files- log, log_test, application.conf, logback.xml, CreateLogger, Mai
 - MapReduceProgram2 and MapReduceProgram2_2-
   - These two classes work together to produce the results for task 2. 
   - MapReduceProgram2 computes time intervals (interval length mentioned in config) and the number of log messages of the type ERROR with injected regex pattern string instances in that interval. This output is not sorted, so MapReduceProgram2_2 takes the output and swaps the key and value to get the records in sorted order (-values to produce descending order). 
-  - Ex- MapReduceProgram2 converts (11:29:58.827 to 11:30:09.827, 1) (11:29:58.827 to 11:30:09.827, 1) to into (11:29:58.827 to 11:30:09.827, 2) and MapReduceProgram2 converts this to (2, 11:29:58.827 to 11:30:09.827)
+  - Ex- MapReduceProgram2 converts (11:29:58.827 to 11:30:09.827, 1) (11:29:58.827 to 11:30:09.827, 1) into (11:29:58.827 to 11:30:09.827, 2) and MapReduceProgram2 converts this to (2, 11:29:58.827 to 11:30:09.827) (sorted order)
 
 - MapReduceProgram3-
   - Creates a file that shows for each message type, the number of the generated log messages.
